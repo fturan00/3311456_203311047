@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/userinfo.dart';
-
 import '../models/buyinstrumentpagemodel.dart';
 
-class buying extends StatefulWidget {
+class Buying extends StatefulWidget {
   final int index;
-  var image;
-  buying({this.image, required this.index});
+  final String image;
+  Buying({required this.image, required this.index});
 
   @override
-  State<buying> createState() => _buyingState();
+  State<Buying> createState() => _BuyingState();
 }
 
-class _buyingState extends State<buying> {
+
+class _BuyingState extends State<Buying> {
   List<InstrumentPage> instrumenPageListesi =
       InstrumentPage.instrumentPageList();
   late InstrumentPage music;

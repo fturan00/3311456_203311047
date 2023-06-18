@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_application_1/auth.dart';
 import 'package:rive/rive.dart';
-
 import 'profile.dart';
 import 'register.dart';
 

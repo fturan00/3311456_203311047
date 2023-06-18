@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter_application_1/main.dart';
 
 class saved extends StatelessWidget {
   const saved({Key? key}) : super(key: key);
@@ -12,20 +11,23 @@ class saved extends StatelessWidget {
       body: Column(
         children: [
           SizedBox(
-            height: 30,
+            height: 100,
           ),
           Row(
             children: [
               SizedBox(
                 width: 20,
               ),
-              IconButton(
-                onPressed: () {
-                  Navigator.popUntil(context, (route) => route.isFirst);
-                },
-                icon: const Icon(
-                  Icons.home,
-                  size: 30,
+              Padding(
+                padding: const EdgeInsets.only(top: 50),
+                child: IconButton(
+                  onPressed: () {
+                    Navigator.popUntil(context, (route) => route.isFirst);
+                  },
+                  icon: const Icon(
+                    Icons.home,
+                    size: 30,
+                  ),
                 ),
               ),
             ],

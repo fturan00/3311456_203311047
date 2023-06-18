@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:lottie/lottie.dart';
-import 'package:rive/rive.dart';
 
 class profile extends StatefulWidget {
   const profile({super.key});
@@ -22,23 +20,30 @@ class _profileState extends State<profile> {
               SizedBox(
                 width: 20,
               ),
-              IconButton(
-                onPressed: () {
-                  Navigator.popUntil(context, (route) => route.isFirst);
-                },
-                icon: const Icon(
-                  Icons.home,
-                  size: 30,
-                ),
-              ),
             ],
           ),
           SizedBox(
             height: 225,
           ),
           Center(
-            child: Lottie.network(
-                "https://assets1.lottiefiles.com/packages/lf20_llbjwp92qL.json"),
+            child: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(right: 300),
+                  child: IconButton(
+                    onPressed: () {
+                      Navigator.popUntil(context, (route) => route.isFirst);
+                    },
+                    icon: const Icon(
+                      Icons.home,
+                      size: 30,
+                    ),
+                  ),
+                ),
+                Lottie.network(
+                    "https://assets1.lottiefiles.com/packages/lf20_llbjwp92qL.json"),
+              ],
+            ),
           ),
         ],
       ),

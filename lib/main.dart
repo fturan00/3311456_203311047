@@ -1,9 +1,3 @@
-import 'dart:async';
-
-import 'dart:io';
-
-import 'dart:ui';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:like_button/like_button.dart';
@@ -14,8 +8,6 @@ import 'instrumentscreens/buying.dart';
 import 'loginpage.dart';
 import 'models/model.dart';
 import 'musicscreen.dart';
-import 'saved.dart';
-import 'package:rive/rive.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -264,7 +256,7 @@ class cardYapisi extends StatelessWidget {
                   InkWell(
                     onTap: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: ((context) => buying(
+                          builder: ((context) => Buying(
                                 image: card.enstrumanFoto1,
                                 index: index,
                               ))));
@@ -289,7 +281,7 @@ class cardYapisi extends StatelessWidget {
                       InkWell(
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => buying(
+                              builder: (context) => Buying(
                                     image: card.enstrumanFoto2,
                                     index: index,
                                   )));
@@ -315,7 +307,7 @@ class cardYapisi extends StatelessWidget {
                       InkWell(
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => buying(
+                              builder: (context) => Buying(
                                     image: card.enstrumanFoto3,
                                     index: index,
                                   )));

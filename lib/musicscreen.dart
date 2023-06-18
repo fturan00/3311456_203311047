@@ -1,12 +1,10 @@
 import 'dart:io';
-
 import 'package:flutter/services.dart';
 import 'dart:ui';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:http/http.dart' as http;
 import 'package:sqflite/sqflite.dart';
-
 import 'package:just_audio/just_audio.dart';
 import 'package:flutter/material.dart';
 import 'models/musicmodel.dart';
@@ -129,16 +127,33 @@ class _musicscreenState extends State<musicscreen> {
                     const SizedBox(
                       height: 10,
                     ),
-                    CircleAvatar(
-                      backgroundColor: Colors.white,
-                      radius: 53,
-                      child: CircleAvatar(
-                        radius: 50,
-                        backgroundColor: music.color4,
-                        child: CircleAvatar(
-                          radius: 45,
-                          backgroundImage: AssetImage(music.imageMusic1),
-                        ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 85),
+                      child: Row(
+                        children: [
+                          IconButton(
+                            onPressed: () {
+                              Navigator.popUntil(
+                                  context, (route) => route.isFirst);
+                            },
+                            icon: const Icon(
+                              Icons.home,
+                              size: 25,
+                            ),
+                          ),
+                          CircleAvatar(
+                            backgroundColor: Colors.white,
+                            radius: 53,
+                            child: CircleAvatar(
+                              radius: 50,
+                              backgroundColor: music.color4,
+                              child: CircleAvatar(
+                                radius: 45,
+                                backgroundImage: AssetImage(music.imageMusic1),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                     const SizedBox(
